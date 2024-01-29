@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'Jenkins-Agent' }
     tools {
-        jdk 'Java17'
+        jdk 'java17'
         maven 'Maven3'
     }
 stages{
@@ -13,7 +13,7 @@ stages{
 
         stage("Checkout from SCM"){
                 steps {
-                    git branch: 'feature', credentialsId: 'https://github.com/nsekhar73/edureka-java-project.git'
+                    git branch: 'feature', credentialsId: 'github' url: 'https://github.com/nsekhar73/edureka-java-project.git'
                 }
         }
 
