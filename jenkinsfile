@@ -12,7 +12,7 @@ pipeline {
           }
         stage("checkout from SCM") {
             steps {
-                gitbranch: 'feature', credentialsId: 'github', url: ' https://github.com/nsekhar73/edureka-java-project.git '
+                gitbranch: 'feature', credentialsId: 'github', url: 'https://github.com/nsekhar73/edureka-java-project.git'
              }
           }
          stage('Build Application') {
